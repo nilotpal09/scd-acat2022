@@ -16,9 +16,6 @@ gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-  
-  # for minima
-  gem "jekyll-seo-tag", "~> 2.7"
 
   # dependency for the theme
   # gem "jekyll", ">= 3.6", "< 5.0"
