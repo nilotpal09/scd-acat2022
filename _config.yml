@@ -33,6 +33,14 @@ github_username:  jekyll
 # theme: minima
 plugins:
   - jekyll-feed
+  
+  # dependency for the theme
+  - jekyll
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-seo-tag
+
 
 load_paths:
   - _sass
