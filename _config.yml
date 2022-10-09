@@ -20,8 +20,8 @@
 
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 
-title: Simplified Cylindrical detector
-email: your-email@example.com
+title: Simplified Cylindrical Detector — an open, realistic calorimeter for ML studies in HEP 
+email: nilotpal.kakati@weizmann.ac.il
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -43,6 +43,10 @@ plugins:
   # - jekyll-gist
   # - jekyll-seo-tag
 
+skin: "/assets/css/skins/dark.css"
+
+mathjax:
+  enable: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -63,3 +67,10 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+
+
+
+
+
