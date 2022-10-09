@@ -27,7 +27,26 @@ All work and no play makes Jack a dull boy. All work and no play makes Jack a du
 
 # Topic with bullet points
 
+All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy -
+
+- All work and no play makes Jack a dull boy.
+- All work and no play makes Jack a dull boy.
 - All work and no play makes Jack a dull boy.
 - All work and no play makes Jack a dull boy.
 - All work and no play makes Jack a dull boy.
 
+All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+
+# Trackz...
+
+<figure style="width: 300px" class="align-right">
+  <img src="{{ '/images/tracks.png' | absolute_url }}" alt="">
+  <figcaption>trackzzzzzzz....</figcaption>
+</figure> 
+
+All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. 
+
+Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. 
+
+
+<!-- <img src="images/tracks.png" class="align-right" alt=""> -->
