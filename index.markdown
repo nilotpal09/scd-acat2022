@@ -10,32 +10,35 @@ image:
   caption: "An event as seen in the Phoenix even display"
 categories:
 ---
+# Abstract 
+
+The feature complexity of data recorded by particle detectors combined with the availability of large simulated datasets presents a unique environment for applying state-of-the-art machine learning (ML) architectures to physics problems. We present the Simplified Cylindrical Detector (SCD): a fully configurable GEANT4 calorimeter simulation which mimics the granularity and response characteristics of general purpose detectors at the LHC. The SCD will be released as a public software to accelerate development of ML-based reconstruction and calorimeter models. Two use-cases based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
 
 # Introduction
 
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+# Detector Design
 
+Describe details of the design
 
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+- Inner Tracking System (ITS)
+- ECAL
+- HCAL
 
-# Topic 1
+# Topoclustering
+
+Describe topoclustering
 
 <img src="images/scd_yz.png" class="align-center" alt="">
 
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+# ML Applications 
 
-# Topic with bullet points
+## ParticleFlow 
 
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy -
+Describe ParticleFlow here.
 
-- All work and no play makes Jack a dull boy.
-- All work and no play makes Jack a dull boy.
-- All work and no play makes Jack a dull boy.
-- All work and no play makes Jack a dull boy.
-- All work and no play makes Jack a dull boy.
+## FastSim 
 
-All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy. All work and no play makes Jack a dull boy.
+Describe FastSim here.
 
 # Trackz...
 
@@ -43,10 +46,6 @@ All work and no play makes Jack a dull boy. All work and no play makes Jack a du
   <img src="{{ '/images/tracks.png' | absolute_url }}" alt="">
   <figcaption>trackzzzzzzz....</figcaption>
 </figure> 
-
-All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. 
-
-Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. All work and no play makes Jack a dull boy. Trackzzz. 
 
 
 <!-- <img src="images/tracks.png" class="align-right" alt=""> -->
