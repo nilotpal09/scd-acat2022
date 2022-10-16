@@ -10,8 +10,9 @@ image:
   caption: "Fig. 1: An event as seen in the Phoenix even display"
 categories:
 ---
-### Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman 
-
+<div align="center">
+##### Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman
+</div>
 # Introduction
 
 We present a fully configurable, open source, GEANT4 based detector simulation for HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. This calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. Two use-cases based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
@@ -19,12 +20,14 @@ We present a fully configurable, open source, GEANT4 based detector simulation f
 # Detector Design
 
 The detector consists of the following 3 parts:
+
 - Inner Tracking System (ITS)
 - ECAL
 - HCAL
+
 The geometry is depicted in Fig. 2. The default setting correspond to a detector similar to ATLAS. 
 
-<figure style="width: 300px" class="align-right">
+<figure style="width: 350px" class="align-right">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
   <figcaption>Fig.2: Detector geometry</figcaption>
 </figure> 
@@ -37,7 +40,7 @@ The geometry is depicted in Fig. 2. The default setting correspond to a detector
 - For the jet clustering makes use of the external FastJet library.
 - A Topoclustering algorithm clusters cells with energy deposits in a way that separates hadronic form electromagnetic showers and suppresses noise.
 
-<figure style="width: 300px" class="align-right">
+<figure style="width: 250px" class="align-right">
   <img src="{{ '/images/tracks.png' | absolute_url }}" alt="">
   <figcaption>Fig.3: Tracking</figcaption>
 </figure> 
@@ -52,9 +55,11 @@ Describe ParticleFlow here.
 
 Describe FastSim here.
 
-# Trackz...
+<sub>
+    # References 
+    [1] here is space for 
+    [2] references
+</sub>
 
 
-
-
-<!-- <img src="images/tracks.png" class="align-right" alt=""> -->
+<img src="images/logos.png" class="align-center" alt="">
