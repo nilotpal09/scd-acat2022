@@ -11,8 +11,9 @@ image:
 categories:
 ---
 <div align="center">
-##### Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman
+_Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman_
 </div>
+
 # Introduction
 
 We present a fully configurable, open source, GEANT4 based detector simulation for HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. This calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. Two use-cases based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
@@ -27,7 +28,7 @@ The detector consists of the following 3 parts:
 
 The geometry is depicted in Fig. 2. The default setting correspond to a detector similar to ATLAS. 
 
-<figure style="width: 350px" class="align-right">
+<figure style="width: 300px" class="align-right">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
   <figcaption>Fig.2: Detector geometry</figcaption>
 </figure> 
@@ -35,12 +36,12 @@ The geometry is depicted in Fig. 2. The default setting correspond to a detector
 
 # Event Processing
 
-- Truth particles from the underlying event simulated by e.g. Pythia propagate through the ITS where a smearing is applied to the tracks of charged particles. An examplary event display of tracks is shown in Fig. 3.
+- Final state particles from the underlying event simulated by e.g. Pythia propagate through the ITS where a smearing is applied to the tracks of charged particles. An examplary event display of tracks is shown in Fig. 3.
 - Material interactions are simulated within ECAL and HCAL. Deposited energy in each cell is recorded.
 - For the jet clustering makes use of the external FastJet library.
 - A Topoclustering algorithm clusters cells with energy deposits in a way that separates hadronic form electromagnetic showers and suppresses noise.
 
-<figure style="width: 250px" class="align-right">
+<figure style="width: 300px" class="align-right">
   <img src="{{ '/images/tracks.png' | absolute_url }}" alt="">
   <figcaption>Fig.3: Tracking</figcaption>
 </figure> 
@@ -49,17 +50,18 @@ The geometry is depicted in Fig. 2. The default setting correspond to a detector
 
 ## ParticleFlow 
 
-Describe ParticleFlow here.
+The task is to reconstruct particles from low-level
+detector response data to predict the set of final state parti-
+cles in a proton-proton collision event. A novel architecture applied to this problem for the first time is based on hypergraphs. The main objective is to provide SCD data as input and obtain the reconstructed objects.
 
 ## FastSim 
 
-Describe FastSim here.
+We are developing a machine learning fast simulation tool that directly maps final state truth particles to the reconstructed events, skipping the computationally expensive detector simulation as well as the reconstruction step. The architecture is based on graph neural networks with slot-attention components. The training target are, ideally, events processed by the SCD with an additional ParticleFlow algorithm applied to it. At the current stage we use a simple smearing with a deterministic dropout on the final state particles to imitate detector and reconstruction effects.
 
-<sub>
-    # References 
-    [1] here is space for 
-    [2] references
-</sub>
+*References*
+<sub>[1] here is space for</sub>
+<sub>[2] references</sub>
 
-
-<img src="images/logos.png" class="align-center" alt="">
+<figure style="width: 800px" class="align-center">
+  <img src="{{ '/images/logos.png' | absolute_url }}" alt="">
+</figure> 
