@@ -11,9 +11,8 @@ image:
 categories:
 ---
 <div align="center">
-*Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman*
+Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman
 </div>
-<br />
 <br />
 
 # Introduction
@@ -68,5 +67,3 @@ We are developing a machine learning fast simulation tool that directly maps fin
 <figure style="width: 800px" class="align-center">
   <img src="{{ '/images/logos.png' | absolute_url }}" alt="">
 </figure> 
-
-why is this not shown anymore
