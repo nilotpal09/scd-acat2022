@@ -70,8 +70,11 @@ We are developing a machine learning fast simulation tool that directly maps fin
 ###### References
 
 <sub>[1] S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub>
+<br />
 <sub>[2] M. Cacciari, G. P. Salam, G. Soyez. *FastJet user manual.* The European Physical Journal C,72(3), mar 2012</sub>
+<br />
 <sub>[3] D. W. Zhang, G. J. Burghouts, C. GM Snoek. *Recurrently predicting hypergraphs.* arXiv preprint arXiv:2106.13919, 2021</sub>
+<br />
 
 <h6 id='contr'>Contributors</h6>
 
