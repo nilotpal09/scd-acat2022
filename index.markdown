@@ -55,7 +55,7 @@ The task is to reconstruct particles from low-level
 detector response data to predict the set of final state parti-
 cles in a proton-proton collision event. A novel architecture applied to this problem for the first time is based on hypergraphs. The main objective is to provide SCD data as input and obtain the reconstructed objects.
 <figure style="width: 300px" class="align-right">
-  <img src="{{ '/images/tracks.pdf' | absolute_url }}" alt="">
+  <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
   <figcaption>Fig.5: Placeholder for Pflow plot</figcaption>
 </figure> 
 
@@ -63,7 +63,7 @@ cles in a proton-proton collision event. A novel architecture applied to this pr
 
 We are developing a machine learning fast simulation tool that directly maps final state truth particles to the reconstructed events, skipping the computationally expensive detector simulation as well as the reconstruction step. The architecture is based on graph neural networks with slot-attention components. The training target are, ideally, events processed by the SCD with an additional ParticleFlow algorithm applied to it. At the current stage we use a simple smearing with a deterministic dropout on the final state particles to imitate detector and reconstruction effects. An examplary event display comparing our network to a baseline is shown in Fig. 5.
 <figure style="width: 300px" class="align-left">
-  <img src="{{ '/images/tracks.pdf' | absolute_url }}" alt="">
+  <img src="{{ '/images/event_display.pdf' | absolute_url }}" alt="">
   <figcaption>Fig.5: FastSim event display</figcaption>
 </figure> 
 
@@ -73,9 +73,7 @@ We are developing a machine learning fast simulation tool that directly maps fin
 
 <sub>[2] references</sub>
 
-<a name="contr">
-###### Contributors
-</a>
+<h6 id='contr'>Contributors</h6>
 
 <sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
 
