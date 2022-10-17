@@ -11,7 +11,7 @@ image:
 categories:
 ---
 <div align="center">
-Nilotpal Kakati and Nathalie Soybelman on behalf of the SCD-team
+Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#contributors)
 </div>
 <br />
 
@@ -59,17 +59,17 @@ cles in a proton-proton collision event. A novel architecture applied to this pr
 
 We are developing a machine learning fast simulation tool that directly maps final state truth particles to the reconstructed events, skipping the computationally expensive detector simulation as well as the reconstruction step. The architecture is based on graph neural networks with slot-attention components. The training target are, ideally, events processed by the SCD with an additional ParticleFlow algorithm applied to it. At the current stage we use a simple smearing with a deterministic dropout on the final state particles to imitate detector and reconstruction effects.
 
-**References**
+###### References
 <br />
 <sub>[1] here is space for</sub>
 
 <sub>[2] references</sub>
 <br />
 
-**Contributors**
+###### Contributors
 <br />
 <sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
 
-<figure style="width: 800px" class="align-center">
+<figure style="width: 700px" class="align-left">
   <img src="{{ '/images/logos.png' | absolute_url }}" alt="">
 </figure> 
