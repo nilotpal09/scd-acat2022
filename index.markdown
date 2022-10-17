@@ -84,6 +84,5 @@ We are developing a machine learning fast simulation tool that directly maps fin
 
 <sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
 
-<figure style="width: 700px" class="align-left">
-  <img src="{{ '/images/logos.png' | absolute_url }}" alt="">
-</figure> 
+
+![no-alignment]({{ '/images/logos.png' | absolute_url }})
