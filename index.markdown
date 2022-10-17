@@ -78,11 +78,8 @@ We are developing a machine learning fast simulation tool that directly maps fin
 ### References
 
 <sub><a name="delphes">[1]</a> A. Mertens. *New features in Delphes 3.* J. Phys.281 Conf. Ser., 608(1):012045, 2015</sub>
-
 <sub><a name="geant">[2]</a> S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub>
-
 <sub><a name="fastj">[3]</a> M. Cacciari, G. P. Salam, G. Soyez. *FastJet user manual.* The European Physical Journal C,72(3), mar 2012</sub>
-
 <sub><a name="hyperg">[4]</a> D. W. Zhang, G. J. Burghouts, C. GM Snoek. *Recurrently predicting hypergraphs.* arXiv preprint arXiv:2106.13919, 2021</sub>
 
 
