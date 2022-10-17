@@ -6,14 +6,16 @@ layout: home
 title:  "Simplified Cylindrical Detector"
 image: 
   path: /images/header_photo.png
-#   thumbnail: /images/scd_yz.png
-  caption: "Fig. 1: An event as seen in the Phoenix even display"
+  thumbnail: /images/scd_logo_2_small.png
+  caption: "Fig. 1: An event as seen in the Phoenix event display"
 categories:
 ---
-<div align="center">
-Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#contr)
+<!-- <div align="center">
+Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
 </div>
-<br />
+<br /> -->
+
+Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
 
 # Introduction
 
@@ -67,7 +69,7 @@ We are developing a machine learning fast simulation tool that directly maps fin
   <figcaption>Fig.5: FastSim event display</figcaption>
 </figure> 
 
-###### References
+### References
 
 <sub>[1] S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub>
 <br />
@@ -76,7 +78,9 @@ We are developing a machine learning fast simulation tool that directly maps fin
 <sub>[3] D. W. Zhang, G. J. Burghouts, C. GM Snoek. *Recurrently predicting hypergraphs.* arXiv preprint arXiv:2106.13919, 2021</sub>
 <br />
 
-<h6 id='contr'>Contributors</h6>
+<!-- <h6 id='contr'>Contributors</h6> -->
+
+# The SCD team
 
 <sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
 
