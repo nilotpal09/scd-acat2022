@@ -31,15 +31,13 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 The detector consists of the following parts:
 
 - **Inner Tracking System (ITS)** The ITS consists of hollow cylinders at the center and disks at the edges. It applies smearing to the charged particle tracks and simulates material interactions. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered.
-- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Each of the calorimeters consists out of 3 layers. The calorimeter cells are designed such that in every layer each of them covers the same distance in terms of pseudorapidity and azimuthal angle, such that an approximately uniform distribution of incoming particles is obtained. Furthermore, the depth of the cells of every layer is constant in order to ensure that the layer fractions of deposited energy do not depend on the incoming particle direction. This design, leading to layer shapes of the form $1/\cosh \eta$, is similar to the ATLAS and CMS design and makes SCD better suited for shower learning tasks than a simple rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup.
-
-An illustration of the geometry is given in Fig. 2.
-
 <figure style="width: 300px" class="align-right">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
   <figcaption>Fig.2: Detector geometry</figcaption>
 </figure> 
+- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Each of the calorimeters consists out of 3 layers. The calorimeter cells are designed such that in every layer each of them covers the same distance in terms of pseudorapidity and azimuthal angle, such that an approximately uniform distribution of incoming particles is obtained. Furthermore, the depth of the cells of every layer is constant in order to ensure that the layer fractions of deposited energy do not depend on the incoming particle direction. This design, leading to layer shapes of the form $1/\cosh \eta$, is similar to the ATLAS and CMS design and makes SCD better suited for shower learning tasks than a simple rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup.
 
+An illustration of the geometry is given in Fig. 2.
 
 # Event Processing
 
@@ -47,7 +45,6 @@ An illustration of the geometry is given in Fig. 2.
 - Material interactions are simulated within ECAL and HCAL. Deposited energy in each cell is recorded.
 - Afterwards a jet clustering using the external FastJet [[3]](#fastj) library is applied.
 - Finally, a Topoclustering algorithm clusters cells with energy deposits in a way that separates hadronic form electromagnetic showers and suppresses noise.
-
 <figure style="width: 200px" class="align-right">
   <img src="{{ '/images/tracks.png' | absolute_url }}" alt="">
   <figcaption>Fig.3: Tracking</figcaption>
