@@ -11,7 +11,7 @@ image:
 categories:
 ---
 <div align="center">
-Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#contributors)
+Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#contr)
 </div>
 <br />
 
@@ -73,7 +73,9 @@ We are developing a machine learning fast simulation tool that directly maps fin
 
 <sub>[2] references</sub>
 
+<a name="contr">
 ###### Contributors
+</a>
 
 <sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
 
