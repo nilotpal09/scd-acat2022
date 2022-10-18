@@ -53,27 +53,32 @@ An illustration of the geometry is given in Fig. 2.
 - Afterwards a jet clustering using the external FastJet [[3]](#fastj) library is applied.
 - Finally, a Topoclustering algorithm clusters cells with energy deposits in a way that separates hadronic form electromagnetic showers and suppresses noise.
 
-# ML Applications 
+# Performance
 
-## ParticleFlow 
+Fig.4 shows the energy deposists in the different layers for different particles which matches the expectation.
 
 <figure style="width: 200px" class="align-right">
-  <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
-  <figcaption>Fig.4: Placeholder for Pflow plot</figcaption>
+  <img src="{{ '/images/layerdeposit.png' | absolute_url }}" alt="">
+  <figcaption>Fig.4: FastSim event display</figcaption>
 </figure> 
 
-The task is to reconstruct particles from low-level
-detector response data to predict the set of final state parti-
-cles in a proton-proton collision event. A novel architecture applied to this problem for the first time is based on Hypergraphs [[4]](#hyperg). The main objective is to provide SCD data as input and obtain the reconstructed objects.
-
-## FastSim 
+# ML Applications 
 
 <figure style="width: 200px" class="align-left">
   <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
   <figcaption>Fig.5: FastSim event display</figcaption>
 </figure> 
 
-We are developing a machine learning fast simulation tool that directly maps final state truth particles to the reconstructed events, skipping the computationally expensive detector simulation as well as the reconstruction step. The architecture is based on graph neural networks with slot-attention components. The training target are, ideally, events processed by the SCD with an additional ParticleFlow algorithm applied to it. At the current stage we use a simple smearing with a deterministic dropout on the final state particles to imitate detector and reconstruction effects. An examplary event display comparing our network to a baseline is shown in Fig. 5.
+- **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state parti-
+cles. A novel architecture applied to this problem for the first time is based on Hypergraphs [[4]](#hyperg). The main objective is to provide SCD data as input and obtain the reconstructed objects.
+
+- **FastSim** This tool is being developed to directly map final state truth particles to the reconstructed events, skipping detector simulation and reconstruction step. Events processed by the SCD with an additional ParticleFlow algorithm applied to it can be used as target. The architecture is based on graph neural networks with slot-attention components. An examplary event display comparing our network to a baseline is shown in Fig. 5.
+
+<figure style="width: 200px" class="align-left">
+  <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
+  <figcaption>Fig.5: FastSim event display</figcaption>
+</figure> 
+
 
 ### References
 
