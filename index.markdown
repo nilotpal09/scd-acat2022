@@ -18,6 +18,10 @@ Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team
 
 Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
 
+<video width="320" controls>
+  <source src="images/detector_sim.mp4" type="video/mp4">
+</video>
+
 # Introduction
 
 Currently, ML research in HEP is limited by the publicly available simulation tools. Most methods are developed using very simplified simulation setups like Delphes [[1]](#delphes) that applies a parametric smearing but does not take into account interactions between particles and detector material.
