@@ -37,16 +37,16 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **Inner Tracking System (ITS)** Particles pass through the ITS which consists of hollow cylinders at the center and disks at the edges. A smearing to the charged particle tracks is applied and material interactions are simulated. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered.
 
+<figure style="width: 300px" class="align-right">
+  <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
+  <figcaption>Fig.3: Detector geometry</figcaption>
+</figure> 
+
 - **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Each of the calorimeters consists out of 3 layers. The calorimeter cells are designed such that in every layer each of them covers the same distance in terms of pseudorapidity and azimuthal angle to obtain a uniform distribution of incoming particles. The depth of the cells within a layer is constant in order to ensure that the layer fractions of deposited energy do not depend on the incoming particle direction. This design, leading to layer shapes of the form $1/\cosh \eta$, is similar to the ATLAS and CMS design and makes SCD better suited for shower learning tasks than a simple rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 - A jet clustering using the external FastJet [[4]](#fastj) library is applied.
 
 - Finally, a Topoclustering algorithm clusters cells with energy deposits to separates hadronic form electromagnetic showers and suppress noise.
-
-<figure style="width: 300px" class="align-right">
-  <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
-  <figcaption>Fig.3: Detector geometry</figcaption>
-</figure> 
 
 # Performance
 
@@ -59,13 +59,13 @@ Fig.4 shows the energy deposists in the different layers for different particles
 
 # ML Applications 
 
+- **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state parti-
+cles. A novel architecture applied to this problem for the first time is based on Hypergraphs [[5]](#hyperg). The main objective is to provide SCD data as input and obtain the reconstructed objects.
+
 <figure style="width: 200px" class="align-left">
   <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
   <figcaption>Fig.5: FastSim event display</figcaption>
 </figure> 
-
-- **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state parti-
-cles. A novel architecture applied to this problem for the first time is based on Hypergraphs [[5]](#hyperg). The main objective is to provide SCD data as input and obtain the reconstructed objects.
 
 - **FastSim** This tool is being developed to directly map final state truth particles to the reconstructed events, skipping detector simulation and reconstruction. Events processed by the SCD with an additional ParticleFlow algorithm applied are used as target. The architecture is based on graph neural networks with slot-attention components. An examplary event display comparing our network to a baseline is shown in Fig. 5.
 
