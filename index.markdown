@@ -37,12 +37,12 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **Inner Tracking System (ITS)** Particles pass through the ITS which consists of hollow cylinders at the center and disks at the edges. A smearing to the charged particle tracks is applied and material interactions are simulated. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered.
 
-<figure style="width: 300px" class="align-right">
+- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Each of the calorimeters consists out of 3 layers. The calorimeter cells are designed such that in every layer each of them covers the same distance in terms of pseudorapidity and azimuthal angle to obtain a uniform distribution of incoming particles. The depth of the cells within a layer is constant in order to ensure that the layer fractions of deposited energy do not depend on the incoming particle direction. This design, leading to layer shapes of the form $1/\cosh \eta$, is similar to the ATLAS and CMS design and makes SCD better suited for shower learning tasks than a simple rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
+
+<figure style="width: 300px" class="align-center">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
   <figcaption>Fig.3: Detector geometry</figcaption>
 </figure> 
-
-- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Each of the calorimeters consists out of 3 layers. The calorimeter cells are designed such that in every layer each of them covers the same distance in terms of pseudorapidity and azimuthal angle to obtain a uniform distribution of incoming particles. The depth of the cells within a layer is constant in order to ensure that the layer fractions of deposited energy do not depend on the incoming particle direction. This design, leading to layer shapes of the form $1/\cosh \eta$, is similar to the ATLAS and CMS design and makes SCD better suited for shower learning tasks than a simple rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 - A jet clustering using the external FastJet [[4]](#fastj) library is applied.
 
@@ -73,16 +73,11 @@ cles. A novel architecture applied to this problem for the first time is based o
 
 ### References
 
-<sub><a name="delphes">[1]</a> A. Mertens. *New features in Delphes 3.* J. Phys.281 Conf. Ser., 608(1):012045, 2015</sub>
-
-<sub><a name="geant">[2]</a> S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub>
-
-<sub><a name="pyth">[3]</a> C. Bierlich, et al. *A comprehensive guide to the physics and usage of pythia 8.3*, 2022</sub>
-
-<sub><a name="fastj">[4]</a> M. Cacciari, G. P. Salam, G. Soyez. *FastJet user manual.* The European Physical Journal C,72(3), mar 2012</sub>
-
-<sub><a name="hyperg">[5]</a> D. W. Zhang, G. J. Burghouts, C. GM Snoek. *Recurrently predicting hypergraphs.* arXiv preprint arXiv:2106.13919, 2021</sub>
-
+<sub><a name="delphes">[1]</a> A. Mertens. *New features in Delphes 3.* J. Phys.281 Conf. Ser., 608(1):012045, 2015</sub><br/>
+<sub><a name="geant">[2]</a> S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub><br/>
+<sub><a name="pyth">[3]</a> C. Bierlich, et al. *A comprehensive guide to the physics and usage of pythia 8.3*, 2022</sub><br/>
+<sub><a name="fastj">[4]</a> M. Cacciari, G. P. Salam, G. Soyez. *FastJet user manual.* The European Physical Journal C,72(3), mar 2012</sub><br/>
+<sub><a name="hyperg">[5]</a> D. W. Zhang, G. J. Burghouts, C. GM Snoek. *Recurrently predicting hypergraphs.* arXiv preprint arXiv:2106.13919, 2021</sub><br/>
 
 # The SCD team
 
