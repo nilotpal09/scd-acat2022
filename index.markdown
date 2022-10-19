@@ -16,12 +16,7 @@ Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team
 </div>
 <br /> -->
 
-
 Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
-
-<video width="400" controls>
-  <source src="images/detector_sim.mp4" type="video/mp4">
-</video>
 
 # Introduction
 
@@ -42,7 +37,7 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **Inner Tracking System (ITS)** Particles pass through the ITS which consists of hollow cylinders at the center and disks at the edges. A smearing to the charged particle tracks is applied and material interactions are simulated. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered.
 
-- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained $1/\cosh \eta$ shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
+- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained cosine hyperbolic shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 <figure style="width: 350px" class="align-center">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
@@ -52,6 +47,14 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 - A jet clustering using the external FastJet [[4]](#fastj) library is applied.
 
 - A Topoclustering algorithm clusters cells with energy deposits to separates hadronic form electromagnetic showers and suppress noise.
+
+# Phoenix 
+
+A Phoenix support for the detector simulation was implemented. It shows all physical objects taking part in the interaction: tracks, jets and cells. We show a demo of a ttbar event: 
+
+<video width="400" controls>
+  <source src="images/detector_sim.mp4" type="video/mp4">
+</video>
 
 # Performance
 
