@@ -37,7 +37,7 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **Inner Tracking System (ITS)** Particles pass through the ITS which consists of hollow cylinders at the center and disks at the edges. A smearing to the charged particle tracks is applied and material interactions are simulated. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered.
 
-- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained $1/\cosh \eta$ shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeterdesign. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
+- **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained $1/\cosh \eta$ shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 <figure style="width: 300px" class="align-center">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
@@ -61,17 +61,8 @@ Fig.4 shows the energy deposists in the different layers for different particles
 
 - **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state parti-
 cles. The main objective is to provide SCD data as input and obtain the reconstructed objects.
-<> A novel architecture applied to this problem for the first time is based on Hypergraphs [[5]](#hyperg).
-
-<><figure style="width: 200px" class="align-left">
-<>  <img src="{{ '/images/event_display.png' | absolute_url }}" alt="">
-<>  <figcaption>Fig.5: FastSim event display</figcaption>
-<></figure> 
 
 - **FastSim** This tool is being developed to directly map final state truth particles to the reconstructed events, skipping detector simulation and reconstruction. Events processed by the SCD with an additional ParticleFlow algorithm applied are used as target for training. 
-<!-- The architecture is based on graph neural networks with slot-attention components. An examplary event display comparing our network to a baseline is shown in Fig. 5.
- -->
-
 
 ### References
 
