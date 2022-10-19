@@ -59,8 +59,7 @@ Fig.4 shows the energy deposists in the different layers for different particles
 
 # ML Applications 
 
-- **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state parti-
-cles. The main objective is to provide SCD data as input and obtain the reconstructed objects.
+- **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state particles. The main objective is to provide SCD data as input and obtain the reconstructed objects.
 
 - **FastSim** This tool is being developed to directly map final state truth particles to the reconstructed events, skipping detector simulation and reconstruction. Events processed by the SCD with an additional ParticleFlow algorithm applied are used as target for training. 
 
