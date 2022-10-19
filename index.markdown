@@ -44,7 +44,7 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained $1/\cosh \eta$ shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
-<figure style="width: 300px" class="align-center">
+<figure style="width: 350px" class="align-center">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
   <figcaption>Fig.3: Detector geometry</figcaption>
 </figure> 
@@ -55,11 +55,18 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 # Performance
 
-Fig.4 shows the energy deposists in the different layers for different particles which matches the expectation.
+For the following plots individual particles were send through the detector and the response was recorded.
 
-<figure style="width: 200px" class="align-right">
+- Fig. 4 shows the energy deposists in the different layers for charged pions, electrons and photons.
+- Fig. 5 depicts the total cell energy of the topoclusters for different initial energies for photons. 
+
+<figure style="width: 350px" class="align-center">
   <img src="{{ '/images/layerdeposit.png' | absolute_url }}" alt="">
   <figcaption>Fig.4: Energy deposit by layer</figcaption>
+</figure>
+<figure style="width: 350px" class="align-center">
+  <img src="{{ '/images/energy_cell_sum.png' | absolute_url }}" alt="">
+  <figcaption>Fig.5: Deposited energy for photons</figcaption>
 </figure> 
 
 # ML Applications 
