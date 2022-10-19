@@ -4,9 +4,11 @@
 
 layout: home
 title:  "Simplified Cylindrical Detector"
-<video width="320" controls>
-  <source src="images/detector_sim.mp4" type="video/mp4">
-</video>
+image: 
+  path: /images/header_photo.png
+  thumbnail: /images/scd_logo_2_small.png
+  caption: "Fig. 1: An event as seen in the Phoenix event display"
+
 categories:
 ---
 <!-- <div align="center">
@@ -16,6 +18,10 @@ Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team
 
 
 Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
+
+<video width="400" controls>
+  <source src="images/detector_sim.mp4" type="video/mp4">
+</video>
 
 # Introduction
 
