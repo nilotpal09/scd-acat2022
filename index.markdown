@@ -24,7 +24,7 @@ Currently, ML research in HEP is limited by the publicly available simulation to
 
 In order to fully exploit the potential of ML R&D it is necessary to have an as realistic setup as possible. Since internal detector simulations, of e.g. the ATLAS collaboration, are proprietary, a common, publicly available detector simulation is desired.
 
-We present a fully configurable, open source, GEANT4 [[2]](#geant) based detector simulation for such HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. The calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. Two use-cases based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
+We present a fully configurable, open source, GEANT4 [[2]](#geant) based detector simulation for such HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. The calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. [Two use-cases](#ml-applications) based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
 
 # Detector Design and Event Processing
 
@@ -48,14 +48,6 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - A Topoclustering algorithm clusters cells with energy deposits to separates hadronic form electromagnetic showers and suppress noise.
 
-# Phoenix 
-
-A Phoenix support for the detector simulation was implemented. It shows all physical objects taking part in the interaction: tracks, jets and cells. We show a demo of a ttbar event: 
-
-<video width="400" controls>
-  <source src="images/detector_sim.mp4" type="video/mp4">
-</video>
-
 # Performance
 
 For the following plots individual particles were send through the detector and the response was recorded.
@@ -71,6 +63,14 @@ For the following plots individual particles were send through the detector and 
   <img src="{{ '/images/energy_cell_sum.png' | absolute_url }}" alt="">
   <figcaption>Fig.5: Deposited energy for photons</figcaption>
 </figure> 
+
+# Phoenix Event Display
+
+A Phoenix support for the detector simulation was implemented. It shows all physical objects taking part in the interaction: tracks, jets and cells. We show a demo of a ttbar event: 
+
+<video width="100%" controls>
+  <source src="images/detector_sim.mp4" type="video/mp4">
+</video>
 
 # ML Applications 
 
