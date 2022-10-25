@@ -46,8 +46,8 @@ plugins:
   # - jekyll-seo-tag
 
 # skin: "/assets/css/skins/default.css"
-skin: "/assets/css/skins/dark.css"
-# skin: "/assets/css/skins/light.css"
+# skin: "/assets/css/skins/dark.css"
+skin: "/assets/css/skins/light.css"
 
 mathjax:
   enable: true

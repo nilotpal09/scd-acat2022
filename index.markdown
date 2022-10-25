@@ -16,17 +16,41 @@ Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team
 </div>
 <br /> -->
 
-Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)
+__Nilotpal Kakati and Nathalie Soybelman on behalf of the [SCD-Team](#the-scd-team)__
 
-# Introduction
+
+<!-- # Introduction
 
 Currently, ML research in HEP is limited by the publicly available simulation tools. Most methods are developed using very simplified simulation setups like Delphes [[1]](#delphes) that applies a parametric smearing but does not take into account interactions between particles and detector material.
 
 In order to fully exploit the potential of ML R&D it is necessary to have an as realistic setup as possible. Since internal detector simulations, of e.g. the ATLAS collaboration, are proprietary, a common, publicly available detector simulation is desired.
 
-We present a fully configurable, open source, GEANT4 [[2]](#geant) based detector simulation for such HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. The calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. [Two use-cases](#ml-applications) based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles.
+We present a fully configurable, open source, GEANT4 [[2]](#geant) based detector simulation for such HEP analysis. This detailed simulation infrastructure provides a reasonable foundation for the development of new experimental techniques. The calorimeter simulation mimics the granularity and response characteristics of general purpose detectors at the LHC. [Two use-cases](#ml-applications) based on data from the SCD are presented: first, an ML-based global particle reconstruction which shows potential to outperform traditional approaches. Second, a fast simulation model transforming a set of truth particles into a set of reconstructed particles. -->
 
-# Detector Design and Event Processing
+<p style="margin-bottom:5mm;"></p>
+
+# [Intorduction](#intorduction)
+
+ML research in HEP requires to have a realistic detector simulation, but the available tools are either - 
+- Very detailed and accurate, but __internal and proprietory__ to experiments like ATLAS ans CMS.
+- Open sourced, but __very simplified, parameteric setup__ like Delphes that do not take into account interactions between particles and detector material.
+
+We present -
+- __Simplified Cylindircal Detetector (SCD)__, a fully configurable, open source, GEANT4 based detector simulation
+- SCD mimics the granularity and response characteristics of general purpose detectors at the LHC like ATLAS and CMS
+
+We also show two [ML use-cases](#scd-in-action) -
+- an ML-based global particle reconstruction which shows potential to outperform traditional approaches
+- a fast simulation model transforming a set of truth particles into a set of reconstructed particles
+
+<p style="margin-bottom:5mm;"></p>
+
+# [Detector Design and Event Processing](#detector-design-and-event-processing)
+
+<figure style="width: 80%" class="align-center">
+  <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
+  <figcaption>Fig.3: Detector geometry</figcaption>
+</figure> 
 
 - Final state truth particles produced by Pythia8[[3]](#pyth) from underlying specified event
 
@@ -39,16 +63,13 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 - **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained cosine hyperbolic shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
-<figure style="width: 350px" class="align-center">
-  <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
-  <figcaption>Fig.3: Detector geometry</figcaption>
-</figure> 
-
 - A jet clustering using the external FastJet [[4]](#fastj) library is applied.
 
 - A Topoclustering algorithm clusters cells with energy deposits to separates hadronic form electromagnetic showers and suppress noise.
 
-# Performance
+<p style="margin-bottom:5mm;"></p>
+
+# [Performance](#performance)
 
 For the following plots individual particles were send through the detector and the response was recorded.
 
@@ -64,7 +85,9 @@ For the following plots individual particles were send through the detector and 
   <figcaption>Fig.5: Deposited energy for photons</figcaption>
 </figure> 
 
-# Phoenix Event Display
+<p style="margin-bottom:5mm;"></p>
+
+# [Phoenix Event Display](#phoenix-event-display)
 
 A Phoenix support for the detector simulation was implemented. It shows all physical objects taking part in the interaction: tracks, jets and cells. We show a demo of a ttbar event: 
 
@@ -72,7 +95,14 @@ A Phoenix support for the detector simulation was implemented. It shows all phys
   <source src="images/detector_sim.mp4" type="video/mp4">
 </video>
 
-# ML Applications 
+<p style="margin-bottom:5mm;"></p>
+
+# [SCD in Action](#scd-in-action)
+
+<figure style="width: 100%" class="align-center">
+  <img src="{{ '/images/EHEP_pipeline.png' | absolute_url }}" alt="">
+  <figcaption>Fig.5: Deposited energy for photons</figcaption>
+</figure> 
 
 - **ParticleFlow** The task is to reconstruct particles from the detector response to predict the set of final state particles. The main objective is to provide SCD data as input and obtain the reconstructed objects.
 
@@ -87,7 +117,133 @@ A Phoenix support for the detector simulation was implemented. It shows all phys
 
 # The SCD team
 
-<sub>Francesco A. di Bello, Etienne Dreyer, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub>
+<!-- <sub>Francesco A. di Bello, Etienne Dreyer, Sanmay Ganguly, Eilam Gross, Lukas Heinrich, Anna Ivina, Marumi Kado, Nilotpal Kakati, Patrick Rieck, Lorenzo Santi, Nathalie Soybelman, Matteo Tusoni</sub> -->
 
+<style>
+  .avatar {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); */
+  }
+
+  .avatar_figure {
+    vertical-align: top;
+    display: inline-block;
+    /* border: 1px dotted gray; */
+    margin: 10px; 
+    width: 80px;
+  }
+
+  .avatar_caption {
+    /* border: 1px dotted blue; */
+    text-align: middle;
+  }
+}</style>
+
+
+<!-- <div class="container">
+  <img src="images/Nilotpal_BW.png" alt="Nilotpal Kakati" class="avatar">
+  <img src="images/Nilotpal_BW.png" alt="Nilotpal Kakati" class="avatar">
+</div> -->
+
+<!-- <div class="container"> -->
+<div>
+
+  <figure class="avatar_figure">
+    <img src='images/team/francesco.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Francesco A. Di Bello
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/etienne.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Etienne Dreyer
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/sanmay.jpg' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Sanmay Ganguly
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/eilam.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Eilam Gross
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/lukas.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Lukas Heinrich
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/anna.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Anna Ivina
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/marumi.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Marumi Kado
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/Nilotpal.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Nilotpal kakati
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/patrick.jpg' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Patrick Reick
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/lorenzo.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Lorenzo Santi
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/nathalie.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      nathalie Soybelman
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/matteo.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      MAtteo Tusoni
+    </figcaption>
+  </figure>
+
+</div>
+
+
+<!-- <div class="container">
+  <img src="images/Nilotpal_BW.png" alt="Avatar" style="border-radius:50%;width:20%" figcaption="Nilotpal kakati">
+  <img src="images/Nilotpal_BW.png" alt="Avatar">
+</div> -->
+
+<p style="margin-bottom:0.5cm;"></p>
 
 ![no-alignment]({{ '/images/logos.png' | absolute_url }})
