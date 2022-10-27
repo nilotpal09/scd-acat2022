@@ -31,17 +31,20 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 # [Intorduction](#intorduction)
 
-ML research in High Energy Physics (HEP) requires to have a realistic detector simulation, but the available tools are either - 
+ML research in High Energy Physics (HEP) requires to have a realistic detector simulation, with the full set of features characterizing calorimeter showers, but the available tools are either - 
 - Very detailed and accurate, but __internal and proprietory__ to experiments like ATLAS and CMS.
-- Open sourced, but __very simplified, parameteric setup__ like Delphes [[1]](#delphes) that do not take into account interactions between particles and detector material.
+- Open-source, but __very simplified, parameteric setup__ such as Delphes [[1]](#delphes),which applies a parametric smearing
+instead of computing interactions at the particle shower level
+<!-- like Delphes  that do not take into account interactions between particles and detector material. -->
 
 We present -
 - __Simplified Cylindircal Detetector (SCD)__, a fully configurable, open source, GEANT4 [[2]](#geant) based detector simulation
 - SCD mimics the granularity and response characteristics of general purpose detectors at the LHC like ATLAS and CMS
 
-We also show two [ML use-cases](#scd-in-action) -
-- an ML-based global particle reconstruction which shows potential to outperform traditional approaches
-- a fast simulation model transforming a set of truth particles into a set of reconstructed particles
+We also show two [ML use-cases](#scd-in-action) 
+
+<!-- - an ML-based global particle reconstruction which shows potential to outperform traditional approaches
+- a fast simulation model transforming a set of truth particles into a set of reconstructed particles -->
 
 <p style="margin-bottom:10mm;"></p>
 
@@ -51,7 +54,7 @@ We also show two [ML use-cases](#scd-in-action) -
 
 <figure style="width: 80%" class="align-center">
   <img src="{{ '/images/scd_yz.png' | absolute_url }}" alt="">
-  <figcaption>Fig.3: Detector geometry</figcaption>
+  <figcaption>Fig.3: Detector geometry shown for one quadrant</figcaption>
 </figure> 
 
 <!-- - **Inner Tracking System (ITS)** Particles pass through the ITS which consists of hollow cylinders at the center and disks at the edges. A smearing to the charged particle tracks is applied and material interactions are simulated. The hits, however, are not used for tracking though a potential extension with an open data tracking detector can be considered. -->
@@ -64,6 +67,7 @@ We also show two [ML use-cases](#scd-in-action) -
 - **Inner Tracking System (ITS)** 
   - The ITS consists of hollow cylinders at the center and disks at the edges
   - Required to simulate material interactions for accurate shower simulation
+  - Has a configurable magnetic field (default 3.8T)
   - Parameterized tracks with smearing
   - _Potential extension with an open data tracking detector_ (in future).
 
@@ -71,7 +75,9 @@ We also show two [ML use-cases](#scd-in-action) -
 
 - **ECAL and HCAL** 
   - An iron layer seperates ECAL from the ITS. 
-  - Both calorimeters consist of 3 layers. 
+  - Both calorimeters consist of 3 concentric layers. 
+  - The geometric coverage of the SCD calorimeter is split into a barrel and two identical endcaps
+  <!-- - (0.0 < |η| < 1.5) and two identical endcap (1.5 < |η| < 3.0) regions  -->
   - In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. 
   - This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. 
   - The obtained cosine hyperbolic shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. 
@@ -81,7 +87,7 @@ We also show two [ML use-cases](#scd-in-action) -
 
 - Supports __jet clustering__ using the external FastJet [[4]](#fastj) library
 
-- Has an __inbuilt Topoclustering algorithm__ to cluster cells with energy deposits to separate hadronic form electromagnetic showers and suppress noise.
+- Has an __topological clustering algorithm__ modeled after [[5]](#topo) to cluster cells with energy deposits to separate hadronic form electromagnetic showers and suppress noise.
 
 <p style="margin-bottom:10mm;"></p>
 
@@ -146,19 +152,24 @@ ECAL1 for the same  (will add it later)
 
 This tool is being developed to directly map final state truth particles to the reconstructed events, skipping detector simulation and reconstruction. Events processed by the SCD with an additional ParticleFlow algorithm applied are used as target for training. 
 
-<figure style="width: 100%" class="align-center">
-  <img src="{{ '/images/FS_results.png' | absolute_url }}" alt="">
-  <figcaption>Fig.6: Deposited energy for photons</figcaption>
+<figure style="width: 80%" class="align-center">
+  <img src="{{ '/images/FS_result.png' | absolute_url }}" alt="">
+  <figcaption>Fig.6: Event display comparing performance of two networks </figcaption>
 </figure> 
 
  _(paper coming soon!)_
 
-### References
+<p style="margin-bottom:10mm;"></p>
+
+# [References](#references)
 
 <sub><a name="delphes">[1]</a> A. Mertens. *New features in Delphes 3.* J. Phys.281 Conf. Ser., 608(1):012045, 2015</sub><br/>
 <sub><a name="geant">[2]</a> S. Agostinelli et al. *GEANT4: A simulation toolkit.* Nucl. Instrum. Meth., A506:250–303, 2003</sub><br/>
 <sub><a name="pyth">[3]</a> C. Bierlich, et al. *A comprehensive guide to the physics and usage of pythia 8.3*, 2022</sub><br/>
 <sub><a name="fastj">[4]</a> M. Cacciari, G. P. Salam, G. Soyez. *FastJet user manual.* The European Physical Journal C,72(3), mar 2012</sub><br/>
+<sub><a name="topo">[5]</a> Georges Aad et al. Topological cell clustering in the ATLAS calorimeters and its performance in LHC Run 1. Eur. Phys. J. C, 77:490, 2017</sub><br/>
+
+<p style="margin-bottom:10mm;"></p>
 
 # [The SCD team](#the-scd-team)
 
@@ -179,7 +190,8 @@ This tool is being developed to directly map final state truth particles to the 
     display: inline-block;
     /* border: 1px dotted gray; */
     margin: 10px; 
-    width: 80px;
+    /* width: 80px; */
+    width: 15%
   }
 
   .avatar_caption {
@@ -198,6 +210,13 @@ This tool is being developed to directly map final state truth particles to the 
 <div>
 
   <figure class="avatar_figure">
+    <img src='images/team/kyle.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Kyle Cranmer
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
     <img src='images/team/francesco.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
       Francesco A. Di Bello
@@ -212,9 +231,16 @@ This tool is being developed to directly map final state truth particles to the 
   </figure>
 
   <figure class="avatar_figure">
-    <img src='images/team/sanmay.jpg' alt='missing' class="avatar">
+    <img src='images/team/sanmay.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
       Sanmay Ganguly
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/anton.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Anton C. Gorbulin
     </figcaption>
   </figure>
 
@@ -254,16 +280,23 @@ This tool is being developed to directly map final state truth particles to the 
   </figure>
 
   <figure class="avatar_figure">
-    <img src='images/team/patrick.jpg' alt='missing' class="avatar">
+    <img src='images/team/patrick.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
       Patrick Reick
     </figcaption>
   </figure>
 
   <figure class="avatar_figure">
-    <img src='images/team/lorenzo.jpeg' alt='missing' class="avatar">
+    <img src='images/team/lorenzo.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
       Lorenzo Santi
+    </figcaption>
+  </figure>
+
+  <figure class="avatar_figure">
+    <img src='images/team/lorenzo.png' alt='missing' class="avatar">
+    <figcaption class="avatar_caption">
+      Jonathan Shlomi
     </figcaption>
   </figure>
 
