@@ -275,14 +275,14 @@ This tool is being developed to directly map final state truth particles to the 
   <figure class="avatar_figure">
     <img src='images/team/Nilotpal.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
-      Nilotpal kakati
+      Nilotpal Kakati
     </figcaption>
   </figure>
 
   <figure class="avatar_figure">
     <img src='images/team/patrick.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
-      Patrick Reick
+      Patrick Rieck
     </figcaption>
   </figure>
 
