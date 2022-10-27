@@ -29,7 +29,7 @@ We present a fully configurable, open source, GEANT4 [[2]](#geant) based detecto
 
 <p style="margin-bottom:15mm;"></p>
 
-# [Intorduction](#intorduction)
+# [Introduction](#introduction)
 
 ML research in High Energy Physics (HEP) requires to have a realistic detector simulation, with the full set of features characterizing calorimeter showers, but the available tools are either - 
 - Very detailed and accurate, but __internal and proprietory__ to experiments like ATLAS and CMS.
@@ -74,13 +74,15 @@ We also show two [ML use-cases](#scd-in-action)
 <!-- - **ECAL and HCAL** The calorimeter system lies on top of an iron layer seperating it from the ITS. Both calorimeters consist of 3 layers. In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. The obtained cosine hyperbolic shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. The granularity and material composition is configurable with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded. -->
 
 - **ECAL and HCAL** 
+
+
   - An iron layer seperates ECAL from the ITS. 
   - Both calorimeters consist of 3 concentric layers. 
-  - The geometric coverage of the SCD calorimeter is split into a barrel and two identical endcaps
+  - The geometric coverage of the SCD calorimeter is split into a __barrel__ and two identical __endcaps__
   <!-- - (0.0 < |η| < 1.5) and two identical endcap (1.5 < |η| < 3.0) regions  -->
-  - In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity and azimuthal angle. 
+  - In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity (&eta;) and azimuthal angle (&phi;). 
   - This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. 
-  - The obtained cosine hyperbolic shape is similar to the ATLAS and CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. 
+  - The obtained 1 / cosh &eta; shape is similar to the CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. 
   - **The granularity and material composition is configurable** with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 <p style="margin-bottom:5mm;"></p>
@@ -102,7 +104,7 @@ For the following plots individual particles were sent through the detector and 
   <figcaption>Fig.4: Energy deposit by layer</figcaption>
 </figure>
 
-- The total cell energy of the topoclusters for different initial energies for photons. 
+- The total cell energy of the topoclusters for different initial energies for photons (initial &eta; = 0). 
 
 <figure style="width: 80%" class="align-center">
   <img src="{{ '/images/energy_cell_sum.png' | absolute_url }}" alt="">
@@ -140,11 +142,10 @@ We try to reconstruct the final state particles from the detector readout using 
 
 An example event. __Thanks to SCD, we can also investigate what's happening at the cell level!__ 
 
-Lorenzo's ED for an event (will add it later)
-
-+
-
-ECAL1 for the same  (will add it later)
+<figure style="width: 100%" class="align-center">
+  <img src="{{ '/images/PF_result.png' | absolute_url }}" alt="">
+  <figcaption>Fig.6: Event display showing truth and reconstructed particles </figcaption>
+</figure> 
 
  _(paper coming soon!)_
 
@@ -191,7 +192,7 @@ This tool is being developed to directly map final state truth particles to the 
     /* border: 1px dotted gray; */
     margin: 10px; 
     /* width: 80px; */
-    width: 15%
+    width: 16%
   }
 
   .avatar_caption {
@@ -294,7 +295,7 @@ This tool is being developed to directly map final state truth particles to the 
   </figure>
 
   <figure class="avatar_figure">
-    <img src='images/team/lorenzo.png' alt='missing' class="avatar">
+    <img src='images/team/jonathan.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
       Jonathan Shlomi
     </figcaption>
@@ -303,14 +304,14 @@ This tool is being developed to directly map final state truth particles to the 
   <figure class="avatar_figure">
     <img src='images/team/nathalie.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
-      nathalie Soybelman
+      Nathalie Soybelman
     </figcaption>
   </figure>
 
   <figure class="avatar_figure">
     <img src='images/team/matteo.png' alt='missing' class="avatar">
     <figcaption class="avatar_caption">
-      MAtteo Tusoni
+      Matteo Tusoni
     </figcaption>
   </figure>
 
