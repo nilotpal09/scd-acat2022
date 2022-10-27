@@ -78,8 +78,7 @@ We also show two [ML use-cases](#scd-in-action)
 
   - An iron layer seperates ECAL from the ITS. 
   - Both calorimeters consist of 3 concentric layers. 
-  - The geometric coverage of the SCD calorimeter is split into a __barrel__ and two identical __endcaps__
-  <!-- - (0.0 < |η| < 1.5) and two identical endcap (1.5 < |η| < 3.0) regions  -->
+  - The geometric coverage of the SCD calorimeter is split into a __barrel__ (abs(&eta;) < 1.5) and two identical __endcaps__ (1.5 < abs(&eta;) < 3) 
   - In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity (&eta;) and azimuthal angle (&phi;). 
   - This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. 
   - The obtained 1 / cosh &eta; shape is similar to the CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. 
