@@ -83,7 +83,7 @@ We also show two [ML use-cases](#scd-in-action)
   - In each layer the cells have a constant depth and cover the same distance in terms of pseudorapidity (&eta;) and azimuthal angle (&phi;). 
   - This ensures a uniform distribution of incoming particles and the layer fraction of deposited energy not to depend on the direction of incoming particles. 
   - The obtained 1 / cosh &eta; shape is similar to the CMS design and is better suited for shower learning tasks than a rectangular calorimeter design. 
-  - **The granularity and material composition is configurable** with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
+  - **The calorimeters are configurable (material, granularity, depth, readout noise etc.)** with the default settings corresponding to the ATLAS setup. Particles interact with the material and the deposited energy is recorded.
 
 <p style="margin-bottom:5mm;"></p>
 
